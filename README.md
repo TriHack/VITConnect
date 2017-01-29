@@ -47,3 +47,6 @@ Features Implemented :
 
 
 ![manual detection](/screenshots/scr9.png)
+
+# Installation
+[Download zip file and extract in your www folder or htdocs folder]: https://github.com/TriHack/VITConnect/archive/master.zip
