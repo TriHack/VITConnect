@@ -109,8 +109,9 @@ box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="../notesharing/index.html">SHARE YOUR NOTES</a>
       <a class="mdl-navigation__link" href="../discussion_room/create_topic.php">DISCUSSION ROOM</a>
-      <a class="mdl-navigation__link" href="../attendance_manager/modifyattend.php">MANAGE ATTENDACE</a>
+      <a class="mdl-navigation__link" href="../attendance_manager/modifyattend.php">MANAGE ATTENDANCE</a>
 	  <a class="mdl-navigation__link" href="../task_reminder/reminder_script.php">REMINDERS</a>
+	  <a class="mdl-navigation__link" href="../about.php">ABOUT..</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
