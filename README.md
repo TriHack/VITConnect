@@ -49,4 +49,5 @@ Features Implemented :
 ![manual detection](/screenshots/scr9.png)
 
 # Installation
-[Download zip file and extract in your www folder or htdocs folder]: https://github.com/TriHack/VITConnect/archive/master.zip
+Download zip file and extract in your www folder or htdocs folder. Also import databases from database folder into Mysqli using PHP MyAdmin.
+
