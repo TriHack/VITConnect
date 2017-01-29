@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+	<link rel="stylesheet" href="comp_style.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+                mdl-layout--fixed-header">
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">COMPUTER</span>
+        <nav class="mdl-navigation">
+            <progress value="0" max="100" id="uploader">0%</progress>
+			<input type="file" value="upload" id="fileButton" />
+			<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+				apiKey: "AIzaSyAxQbFG5UPgV3JyrIOsZjDhe1o6va0ijbs",
+				authDomain: "vithacks-19341.firebaseapp.com",
+				databaseURL: "https://vithacks-19341.firebaseio.com",
+				storageBucket: "vithacks-19341.appspot.com",
+				messagingSenderId: "108344437179"
+			  };
+			  firebase.initializeApp(config);
+			  //get elements
+			  var uploader = document.getElementById("uploader");
+			  var fileButton = document.getElementById("fileButton");
+
+			  //listen for file action
+			  fileButton.addEventListener('change',function(e){
+				  //get file
+				  var file = e.target.files[0];
+
+				  //create storage ref
+				  var storageRef = firebase.storage().ref('comp/' + file.name);
+
+				  //upload file
+				  var task = storageRef.put(file);
+				  //progres bar
+				  task.on('state_changed',
+						  function progress(snapshot){
+								var percentage = (snapshot.bytesTransferred / snapshot.totalBytes)*100;
+								uploader.value = percentage;
+							},
+						  function error(err){
+								alert(err);
+							},
+						  function complete(){
+								//window.alert("Done");
+								var file_ref = firebase.storage().ref();
+								file_ref.child('comp/' + file.name).getDownloadURL().then(function(url) {
+								  console.log(url);
+								  $("div#addhere").append('<a href="' + url + '">' + file.name + '</a>' + '</br>');
+								}).catch(function(error) {
+								  // Handle any errors
+								});
+								
+						}
+				);
+			  });	
+
+			</script>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here -->
+			<div class="cover">
+				<div class="inner">
+					COMPUTER : MODULE 1
+				</div>
+				<div class="outer" id="addhere">
+					
+				</div>
+			</div>  
+		</div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,464 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Poppins:400,600,700');
+body {
+    background: url("https://www.walldevil.com/wallpapers/w03/025271-abstract-background-gaussian-blur.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -khtml-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.25em;
+    background-color: transparent;
+    color: #8396B0;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+#login-wrapper {
+    margin: 10% 0 0;
+}
+
+#login-wrapper .card {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-clip: padding-box;
+    position: relative;
+    height: 350px;
+}
+
+#login-wrapper .card .card-title {
+    font-size: 1.5625em;
+    text-align: center;
+    font-weight: 600;
+}
+
+#login-wrapper .card .btn-fab {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: -28px;
+    transition: all 0.4s ease-in-out;
+}
+
+#login-wrapper .card .btn-fab i {
+    line-height: 24px;
+    font-size: 1em;
+    transition-delay: 0.2s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#login-wrapper .card .btn-fab.btn-close {
+    z-index: 150;
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0.1s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 200;
+    background: #fff;
+}
+
+#login-wrapper .card .btn-fab.btn-open {
+    z-index: 99;
+}
+
+#login-wrapper .card #login_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    visibility: visible;
+    border-radius: 5px;
+}
+
+#login-wrapper .card #signup_wrapper {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    border-radius: 5px;
+}
+
+#login-wrapper .card .btn-fab #signup_wrapper {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#login-wrapper .card .header {
+    display: block;
+    position: relative;
+    font-size: 2em;
+    color: #F50057!important;
+}
+
+#login-wrapper .card .btn-fab.header {
+    color: #fff;
+}
+
+#login-wrapper .card.active {
+    height: 320px;
+}
+
+#login-wrapper .card.active .btn-fab.btn-open {
+    top: 0;
+    right: 0;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-clip: padding-box;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    cursor: auto;
+}
+
+#login-wrapper .card.active .btn-fab.btn-close {
+    z-index: 150;
+    visibility: visible;
+    opacity: 1;
+}
+
+#login-wrapper .card.active .btn-open>i {
+    margin: 0 15px;
+    transform: rotate(360deg);
+    right: 10px;
+    top: 15px;
+    position: absolute;
+    font-size: 1.2em;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#login-wrapper .card.active .btn-close>i {
+    transform: rotate(360deg);
+    transition-delay: 0.2s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+#login-wrapper .card.active #signup_wrapper {
+    display: block;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition-delay: 0.2s;
+    visibility: visible;
+    background: #e91e63;
+    z-index: 100;
+    border-radius: 5px;
+}
+
+login-wrapper .card .btn-fab {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: -28px;
+    transition: all .4s ease-in-out;
+}
+
+.btn.btn-fab, .navbar .navbar-nav>li>a.btn.btn-fab {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 56px;
+    margin: auto;
+    min-width: 56px;
+    width: 56px;
+    padding: 0;
+    position: relative;
+    line-height: normal;
+}
+
+.btn.btn-white {
+    background-color: #fff;
+    color: #FFF;
+}
+
+.btn, .btn:active {
+    outline: none!important;
+}
+
+.btn.btn-white, .navbar .navbar-nav>li>a.btn.btn-white {
+    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, .14), 0 3px 1px -2px rgba(255, 255, 255, .2), 0 1px 5px 0 rgba(255, 255, 255, .12);
+    color: #e91e63!important;
+}
+a.btn.btn-white:focus, a.btn.btn-white:active {
+    background: #fff!important;
+}
+.btn, .navbar .navbar-nav>li>a.btn {
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    padding: 12px 30px;
+    margin: 10px 1px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    will-change: box-shadow, transform;
+    transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+    outline: 0;
+}
+
+#login-wrapper .card .btn-fab.btn-open {
+    z-index: 99;
+}
+
+#login-wrapper .card .btn-fab {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: -28px;
+    transition: all .4s ease-in-out;
+}
+
+.btn.btn-fab, .navbar .navbar-nav>li>a.btn.btn-fab {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 56px;
+    margin: auto;
+    min-width: 56px;
+    width: 56px;
+    padding: 0;
+    position: relative;
+    line-height: normal;
+}
+
+.btn.btn-primary {
+    background-color: #e91e63!important;
+    color: #ffffff!important;
+}
+
+.btn.btn-primary, .navbar .navbar-nav>li>a.btn.btn-primary {
+    box-shadow: 0 2px 2px 0 rgba(233, 30, 99, .14), 0 3px 1px -2px rgba(233, 30, 99, .2), 0 1px 5px 0 rgba(233, 30, 99, .12)!important;
+}
+
+.btn, .navbar .navbar-nav>li>a.btn {
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    padding: 12px 30px;
+    margin: 10px 1px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    will-change: box-shadow, transform;
+    transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+    outline: 0;
+}
+
+#login-wrapper .card.active #login_wrapper {
+    transform: scale(0.9);
+    top: -30px;
+    opacity: .5;
+    z-index: 0;
+    border-radius: 5px;
+}
+
+#login-wrapper .card #login_wrapper, #login-wrapper .card .btn-fab.btn-close {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.card .card-heading {
+    padding: 20px 20px 10px;
+    position: relative;
+}
+
+#login-wrapper .card .card-title {
+    font-size: 1.5625em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.card .card-heading h2.card-title {
+    font-size: 1.25em;
+    margin: 0;
+    font-weight: 200;
+    color: #4E5D6F!important;
+}
+
+.card .card-heading .card-title {
+    line-height: 23px;
+}
+
+.card .card-heading .card-title.alt-title {
+    color: #fff!important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4E5D6F!important;
+    font-weight: 200;
+}
+
+.card.type--scheduler h4, h1, h2, h3, h4, h5, h6 {
+    font-family: Poppins, sans-serif;
+}
+
+.card .card-body {
+    padding: 10px 20px 20px;
+}
+
+.checkbox label, label.checkbox-inline {
+    cursor: pointer;
+    padding-left: 0;
+}
+.checkbox .checkbox-material .check, label.checkbox-inline .checkbox-material .check {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(165,181,203,.53);
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 1;
+}
+.checkbox label, .radio label, label {
+    font-size: 12px;
+    line-height: 1.42857;
+    color: #8c9bae!important;
+    font-weight: 400;
+}
+
+.checkbox label, .radio label {
+    min-height: 17px;
+}
+
+.form-group {
+    padding-bottom: 7px;
+    margin: 25px 0 0;
+}
+
+#header_wrapper .container, .form-group {
+    position: relative;
+}
+
+.form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label {
+    top: -8px;
+    font-size: 13px;
+    line-height: 1.4em;
+    left: 0;
+}
+
+.form-group.label-floating label.control-label {
+    will-change: left, top, contents;
+}
+
+.form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label, .form-group.label-static label.control-label {
+    position: absolute;
+    pointer-events: none;
+    transition: .3s ease all;
+}
+
+.form-group label.control-label {
+    font-size: 9px;
+    line-height: 1.07143;
+    font-weight: 400;
+    margin: 16px 0 0;
+}
+
+.form-group .checkbox label, .form-group .radio label, .form-group label {
+    font-size: 12px;
+    line-height: 1.42857;
+    color: #8c9bae;
+    font-weight: 400;
+}
+
+.form-group .form-control {
+    margin-bottom: 7px;
+}
+
+.form-control, .form-group .form-control {
+    border: 0;
+    background-image: linear-gradient(#03a9f4, #03a9f4), linear-gradient(rgba(165, 181, 203, .5), rgba(165, 181, 203, .5))!important;
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: transparent;
+    transition: background 0s ease-out;
+    float: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.form-control {
+    height: 33px;
+    padding: 7px 0;
+    margin-bottom: 7px;
+}
+
+.form-group .form-control.white {
+    border: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4))!important;
+  color:#fff;
+}
+
+.form-group.label-floating.is-focused label.control-label, .form-group.label-floating:not(.is-empty) label.control-label, .form-group.label-static label.control-label {
+    top: -32px;
+    left: 0;
+    font-size: 11px;
+    line-height: 1em;
+}
+
+.form-group.is-focused .form-control.white {
+    linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4))!important;
+}
+
+.form-group.is-focused .form-control, .form-group.is-focused .form-control.white {
+    background-size: 100% 2px, 100% 1px;
+    transition-duration: .3s;
+    box-shadow: none;
+    outline: 0;
+}
+
+.form-group.label-floating label.control-label.white, .form-group.label-placeholder label.control-label.white {
+    color: #fff!important;
+}
+
+.form-group .form-control {
+    margin-bottom: 7px;
+}
+
+.checkbox input[type=checkbox]:checked+.checkbox-material .check, label.checkbox-inline input[type=checkbox]:checked+.checkbox-material .check {
+    color: #03a9f4!important;
+    border-color: #03a9f4!important;
+}
+
+.checkbox input[type=checkbox]:checked+.checkbox-material .check:before, label.checkbox-inline input[type=checkbox]:checked+.checkbox-material .check:before {
+    color: #03a9f4!important;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+}
+
+.btn.btn-white:hover {
+    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, .14), 0 3px 1px -2px rgba(255, 255, 255, .2), 0 1px 5px 0 rgba(255, 255, 255, .12);
+    color: #e91e63!important;
+    background-color: #fff!important;
+}
+.m-t-30{
+  margin-top:30px;
+}
