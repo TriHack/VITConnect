@@ -1,5 +1,5 @@
 # VITConnect
-This web application was built during W.A.R :p ( Weekend Aplication Rumble ), a 72-hr. hackathon organized Programmer's Hub, VIT Pune.
+This web application was built during W.A.R :p ( Weekend Application Rumble ), a 72-hr. hackathon organized Programmer's Hub, VIT Pune.
 
 
 Team Members: 
@@ -22,3 +22,28 @@ Features Implemented :
 4. Discussion Room - 
 5. Note Sharing - used firebase
 
+![manual detection](/screenshots/scr1.png)
+
+
+![manual detection](/screenshots/scr2.png)
+
+
+![manual detection](/screenshots/scr3.png)
+
+
+![manual detection](/screenshots/scr4.png)
+
+
+![manual detection](/screenshots/scr5.png)
+
+
+![manual detection](/screenshots/scr6.png)
+
+
+![manual detection](/screenshots/scr7.png)
+
+
+![manual detection](/screenshots/scr8.png)
+
+
+![manual detection](/screenshots/scr9.png)
